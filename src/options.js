@@ -112,10 +112,6 @@ function restore_options() {
         chrome.tabs.create({
             url: "chrome://extensions"
         })
-    }), document.getElementById("rateandreview").addEventListener("click", function() {
-        chrome.tabs.create({
-            //url: "https://chrome.google.com/webstore/detail/simple-blocker/akfbkbiialncppkngofjpglbbobjoeoe/reviews"
-        })
     });
     for (var c = JSON.parse(localStorage.blocklist), d = "", e = 0; e < c.length; e++) d = d + c[e] + "\n";
     document.getElementById("blockbox").value = d, restore_onoff();
